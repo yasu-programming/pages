@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ヤス - モダンなWebエンジニアのポートフォリオサイト。職務経歴、スキル、プロジェクト実績を紹介">
+    <meta name="keywords" content="Web開発, エンジニア, JavaScript, React, Node.js, ポートフォリオ">
+    <meta name="author" content="ヤス">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ヤス - Webエンジニア ポートフォリオ">
+    <meta property="og:description" content="モダンなWebエンジニアのポートフォリオサイト">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yasu-programming.github.io/pages/">
+    <meta property="og:image" content="https://yasu-programming.github.io/pages/assets/images/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ヤス - Webエンジニア ポートフォリオ">
+    <meta name="twitter:description" content="モダンなWebエンジニアのポートフォリオサイト">
+    <meta name="twitter:image" content="https://yasu-programming.github.io/pages/assets/images/og-image.jpg">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ヤス Portfolio">
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    
+    <title>ヤス - Webエンジニア ポートフォリオ</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav__container">
+            <a href="#home" class="nav__logo">ヤス</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">ホーム</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#career" class="nav__link">職務経歴</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">スキル</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">実績</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">お問い合わせ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    <span class="hero__greeting">こんにちは、</span>
+                    <span class="hero__name">ヤスです</span>
+                </h1>
+                <p class="hero__subtitle">モダンなWebエンジニア</p>
+                <p class="hero__description">
+                    ユーザー体験を重視したWebアプリケーション開発を得意とし、
+                    最新技術を活用して価値あるプロダクトを創造します。
+                </p>
+                <div class="hero__cta">
+                    <a href="#career" class="btn btn--primary">職務経歴を見る</a>
+                    <a href="#contact" class="btn btn--secondary">お問い合わせ</a>
+                </div>
+            </div>
+            <div class="hero__scroll">
+                <div class="hero__scroll-icon"></div>
+                <span class="hero__scroll-text">スクロール</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Section -->
+    <section class="career" id="career">
+        <div class="container">
+            <h2 class="section__title">職務経歴</h2>
+            <div class="career__timeline">
+                <div class="career__item">
+                    <div class="career__date">2023年 - 現在</div>
+                    <div class="career__content">
+                        <h3 class="career__title">シニアフロントエンドエンジニア</h3>
+                        <p class="career__company">テック企業A</p>
+                        <p class="career__description">
+                            React.jsとTypeScriptを使用したSPAの開発をリード。
+                            チーム管理とコードレビューを担当し、開発効率を30%向上。
+                        </p>
+                        <div class="career__technologies">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">GraphQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="career__item">
+                    <div class="career__date">2021年 - 2023年</div>
+                    <div class="career__content">
+                        <h3 class="career__title">フロントエンドエンジニア</h3>
+                        <p class="career__company">スタートアップB</p>
+                        <p class="career__description">
+                            Vue.jsを使用したWebアプリケーションの開発。
+                            UX/UIデザイナーと連携し、ユーザー体験の向上に貢献。
+                        </p>
+                        <div class="career__technologies">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Sass</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="career__item">
+                    <div class="career__date">2019年 - 2021年</div>
+                    <div class="career__content">
+                        <h3 class="career__title">Webデベロッパー</h3>
+                        <p class="career__company">Web制作会社C</p>
+                        <p class="career__description">
+                            企業サイトやECサイトの制作。HTML/CSS/JavaScriptを使用し、
+                            レスポンシブデザインとSEO最適化を実装。
+                        </p>
+                        <div class="career__technologies">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">WordPress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section__title">テクニカルスキル</h2>
+            <div class="skills__grid">
+                <div class="skills__category">
+                    <h3 class="skills__category-title">フロントエンド</h3>
+                    <div class="skills__items">
+                        <div class="skill__item">
+                            <div class="skill__info">
+                                <span class="skill__name">React.js</span>
+                                <span class="skill__level">90%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__info">
+                                <span class="skill__name">TypeScript</span>
+                                <span class="skill__level">85%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__info">
+                                <span class="skill__name">Vue.js</span>
+                                <span class="skill__level">80%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__info">
+                                <span class="skill__name">CSS3 / Sass</span>
+                                <span class="skill__level">95%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" data-width="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills__category">
+                    <h3 class="skills__category-title">バックエンド</h3>
+                    <div class="skills__items">
+                        <div class="skill__item">
+                            <div class="skill__info">
+                                <span class="skill__name">Node.js</span>
+                                <span class="skill__level">75%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__info">
+                                <span class="skill__name">Express.js</span>
+                                <span class="skill__level">70%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__info">
+                                <span class="skill__name">MongoDB</span>
+                                <span class="skill__level">65%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" data-width="65"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills__category">
+                    <h3 class="skills__category-title">ツール・その他</h3>
+                    <div class="skills__items">
+                        <div class="skill__item">
+                            <div class="skill__info">
+                                <span class="skill__name">Git</span>
+                                <span class="skill__level">90%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__info">
+                                <span class="skill__name">Docker</span>
+                                <span class="skill__level">70%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__info">
+                                <span class="skill__name">AWS</span>
+                                <span class="skill__level">60%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" data-width="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section__title">プロジェクト実績</h2>
+            <div class="projects__grid">
+                <div class="project__card">
+                    <div class="project__image">
+                        <div class="project__placeholder">プロジェクト画像</div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">ECサイトリニューアル</h3>
+                        <p class="project__description">
+                            React.jsとNode.jsを使用したフルスタック開発。
+                            ユーザビリティ向上により売上20%アップを実現。
+                        </p>
+                        <div class="project__technologies">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project__links">
+                            <a href="#" class="project__link">デモ</a>
+                            <a href="#" class="project__link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project__card">
+                    <div class="project__image">
+                        <div class="project__placeholder">プロジェクト画像</div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">企業ダッシュボード</h3>
+                        <p class="project__description">
+                            Vue.jsを使用したデータ可視化ダッシュボード。
+                            リアルタイムデータ表示とインタラクティブなチャート。
+                        </p>
+                        <div class="project__technologies">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                        <div class="project__links">
+                            <a href="#" class="project__link">デモ</a>
+                            <a href="#" class="project__link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project__card">
+                    <div class="project__image">
+                        <div class="project__placeholder">プロジェクト画像</div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">レスポンシブWebサイト</h3>
+                        <p class="project__description">
+                            モダンなデザインとアニメーションを実装した企業サイト。
+                            SEO最適化により検索順位大幅改善。
+                        </p>
+                        <div class="project__technologies">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">SCSS</span>
+                            <span class="tech-tag">GSAP</span>
+                        </div>
+                        <div class="project__links">
+                            <a href="#" class="project__link">デモ</a>
+                            <a href="#" class="project__link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section__title">お問い合わせ</h2>
+            <div class="contact__content">
+                <div class="contact__info">
+                    <h3 class="contact__subtitle">お気軽にご連絡ください</h3>
+                    <p class="contact__description">
+                        新しいプロジェクトやお仕事のご相談など、
+                        どんなことでもお気軽にお問い合わせください。
+                    </p>
+                    <div class="contact__details">
+                        <div class="contact__item">
+                            <span class="contact__icon">📧</span>
+                            <span class="contact__text">yasu@example.com</span>
+                        </div>
+                        <div class="contact__item">
+                            <span class="contact__icon">💼</span>
+                            <span class="contact__text">GitHub: @yasu-programming</span>
+                        </div>
+                        <div class="contact__item">
+                            <span class="contact__icon">📱</span>
+                            <span class="contact__text">Twitter: @yasu_dev</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact__form" id="contact-form">
+                    <div class="form__group">
+                        <label for="name" class="form__label">お名前</label>
+                        <input type="text" id="name" name="name" class="form__input" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="email" class="form__label">メールアドレス</label>
+                        <input type="email" id="email" name="email" class="form__input" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="subject" class="form__label">件名</label>
+                        <input type="text" id="subject" name="subject" class="form__input" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="message" class="form__label">メッセージ</label>
+                        <textarea id="message" name="message" class="form__textarea" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">送信する</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">
+                © 2024 ヤス. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/gsap-animations.js"></script>
+</body>
+</html>
