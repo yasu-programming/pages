@@ -680,6 +680,38 @@ body {
     color: var(--gray-300);
 }
 
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+.hero::before {
+    will-change: transform;
+}
+
+.skill__progress {
+    will-change: width;
+}
+
+.project__card {
+    will-change: transform;
+}
+
+.nav {
+    will-change: background-color, box-shadow;
+}
+
+/* Add GPU acceleration for smooth animations */
+.hero__content,
+.hero__scroll,
+.project__card,
+.skill__progress,
+.btn {
+    transform: translateZ(0);
+}
+
+/* Optimize font loading */
+@font-face {
+    font-family: 'Modern';
+    font-display: swap;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     :root {
@@ -761,5 +793,81 @@ body {
     .hero__cta .btn {
         width: 100%;
         text-align: center;
+    }
+    
+    .projects__grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .project__card {
+        margin: 0;
+    }
+    
+    .skills__grid {
+        gap: 1rem;
+    }
+    
+    .contact__content {
+        gap: 1.5rem;
+    }
+    
+    .nav__container {
+        padding: 0 0.5rem;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero::before {
+        background-size: 20px 20px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --gray-50: #1e293b;
+        --gray-100: #334155;
+        --gray-200: #475569;
+        --gray-800: #f1f5f9;
+        --gray-900: #f8fafc;
+    }
+    
+    body {
+        background-color: var(--gray-50);
+        color: var(--gray-800);
+    }
+    
+    .nav {
+        background: rgba(30, 41, 59, 0.95);
+        border-bottom-color: var(--gray-200);
+    }
+    
+    .hero {
+        background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-50) 100%);
+    }
+    
+    .skills__category,
+    .project__card,
+    .contact__form {
+        background: var(--gray-100);
+        border-color: var(--gray-200);
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .hero__scroll-icon::before {
+        animation: none;
     }
 }
