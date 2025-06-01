@@ -293,7 +293,7 @@ body {
 
 .hero__scroll {
     position: absolute;
-    bottom: 2rem;
+    bottom: 4rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -302,6 +302,7 @@ body {
     gap: 0.5rem;
     color: var(--gray-500);
     cursor: pointer;
+    z-index: 10;
 }
 
 .hero__scroll-icon {
@@ -346,7 +347,7 @@ body {
 
 /* ===== CAREER SECTION ===== */
 .career {
-    padding: var(--section-padding);
+    padding: 6rem 0 4rem 0;
     background: white;
 }
 
@@ -751,6 +752,14 @@ body {
         width: 100%;
     }
     
+    .hero__scroll {
+        bottom: 3rem;
+    }
+    
+    .career {
+        padding: 5rem 0 4rem 0;
+    }
+    
     .career__timeline::before {
         left: 1rem;
     }
@@ -784,6 +793,14 @@ body {
     
     .hero__name {
         font-size: var(--font-size-4xl);
+    }
+    
+    .hero__scroll {
+        bottom: 2rem;
+    }
+    
+    .career {
+        padding: 4rem 0 3rem 0;
     }
     
     .section__title {
